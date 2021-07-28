@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        #my-canvas {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="my-canvas" width="800" height="800"></canvas>
+    <script>
+
+        var canvas = document.querySelector('#my-canvas');
+        var context = canvas.getContext('2d');
+
+        function drawPixel(x, y, color) {
+            // to decrease smoothing for numbers with decimal part
+            var roundedX = Math.round(x);
+            var roundedY = Math.round(y);
+
+            context.beginPath();
+            context.fillStyle = color || '#000';
+            context.fillRect(roundedX, roundedY, 1, 1);
+            context.fill();
+        }
+
+        var colors = ['red', 'blue', 'orange', 'yellow', 'brown', 'green'];
+
+        var t1 = new Date();
+        let canW = canvas.width;
+        let canH = canvas.height;
+        var cursorX = 0;
+        var cursorY = 0;
+        var cursorX2 = canW;
+        var cursorY2 = canH;
+        var cursorX3 = canW;
+        var cursorY3 = 0;
+        var cursorX4 = 0;
+        var cursorY4 = canH;
+        let jump = 20;
+        var myInterval = setInterval(function () {
+            cursorX = cursorX + jump * Math.random();
+            cursorY = cursorY + jump * Math.random();
+            cursorX2 = cursorX2 - jump * Math.random();
+            cursorY2 = cursorY2 - jump * Math.random();
+            cursorX3 = cursorX3 - jump * Math.random();
+            cursorY3 = cursorY3 + jump * Math.random();
+            cursorX4 = cursorX4 + jump * Math.random();
+            cursorY4 = cursorY4 - jump * Math.random();
+            let radius = 10;
+            // for(let i = 0; i < canW*canH; ++i) {
+            //       	var x = i%canW;
+            //       	var y = Math.floor(i/canH);
+            //         var d = Math.round(Math.sqrt(((x-canW/2)*(x-canW/2)) + ((y-canH/2)*(y-canH/2))));
+            //     //    var color = `rgb(${x},${10*d},${y})`;
+            //         var color = `#${10*d}`;
+            //         drawPixel(x, y, color);
+            //     }
+            for (let i = 0; i < canW; i++) {
+                for (let j = 0; j < canH; j++) {
+                    var d = 255-Math.round(Math.sqrt(((i - cursorX) * (i - cursorX)) + ((j - cursorY) * (j -cursorY))));
+                    var e = 255-Math.round(Math.sqrt(((i - cursorX2) * (i - cursorX2)) + ((j - cursorY2) * (j -cursorY2))));
+                    var f = 255-Math.round(Math.sqrt(((i - cursorX3) * (i - cursorX3)) + ((j - cursorY3) * (j -cursorY3))));
+                    var g = 255-Math.round(Math.sqrt(((i - cursorX4) * (i - cursorX4)) + ((j - cursorY4) * (j -cursorY4))));
+                    var color = `rgb(${radius*(d)},${radius*(f)},${radius*(e)})`;
+                    //var color = `#${d}`;
+                    drawPixel(i, j, color);
+                }
+            }
+            // for (let i = 0; i < canW; i++) {
+            //     for (let j = 0; j < canH; j++) {
+            //         var d = Math.round(Math.sqrt(((i - canW /2) * (i - canW / 2)) + ((j - canH / 2) * (j - canH / 2))));
+            //         var color = `rgb(${d},${d},${d})`;
+            //         //var color = `#${d}`;
+            //         drawPixel(i, j, color);
+            //     }
+            // }
+        }, 1);
+        myInterval;
+        setTimeout(function () { clearInterval(myInterval); console.log("alldone") }, 60000);
+
+
+
+
+        var t2 = new Date();
+        var dt = t2 - t1;
+
+        console.log('elapsed time = ' + dt + ' ms');
+
+    </script>
+</body>
+
+</html>
