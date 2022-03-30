@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let string = "In the beginning the Universe was created. This has made a lot of people very angry and has been widely regarded as a bad move";
+      let lowerString = string.toLowerCase().split("");
+      console.log(lowerString);
+      let commonChar = "";
+      function mostCommonCharacter(string) {
+        let n = 0;
+        //get first character, count occurrences
+        let firstChar = string.slice(0, 1);
+        console.log(firstChar);
+        array.forEach((element) => {
+          if (firstChar == element) {
+            n++;
+          }
+        });
+        return commonChar;
+      }
+      console.log(mostCommonCharacter(lowerString));
+    </script>
+  </head>
+  <body></body>
+</html>

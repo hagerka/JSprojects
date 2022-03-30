@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+    @keyframes rotating {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {border-color: red;}
+      50% {border-color: royalblue;}
+      75% {border-color: green;}
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .triangle-topright1 {
+        position:relative;
+      width: 0;
+      height: 0;
+      display: flex;
+      left: 400px;
+      top: 300px;
+      border-top: 50px solid red;
+      border-left: 50px solid transparent;
+      animation-name: rotating;
+      animation-duration: 2s;
+animation-timing-function: ease-in-out;    }
+    .triangle-topright2 {
+      width: 0;
+      height: 0;
+      border-top: 50px solid blue;
+      border-left: 50px solid transparent;
+      animation-name: rotating;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
+    }
+    .triangle-topright3 {
+      width: 0;
+      height: 0;
+      border-top: 50px solid green;
+      border-left: 50px solid transparent;
+      animation-name: rotating;
+      animation-duration: 6s;
+      animation-timing-function: ease-in-out;
+    }
+    .triangle-topright4 {
+      width: 0;
+      height: 0;
+      border-top: 50px solid black;
+      border-left: 50px solid transparent;
+      animation-name: rotating;
+      animation-duration: 8s;
+      animation-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="triangle-topright1">
+  <div class="triangle-topright2">
+  <div class="triangle-topright3">
+  <div class="triangle-topright4">
+      </div></div></div></div>
+</body>
