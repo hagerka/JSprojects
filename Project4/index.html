@@ -2,8 +2,97 @@
 <html>
   <head>
     <style>
-        
+      h1 {
+        color: blueviolet;
+      }
+      h2 {
+        color: fuchsia;
+      }
+      h3 {
+        color: aqua;
+        background-color: gray;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 30px;
+      }
+      figure {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0px;
+        margin-right: 40px;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <tr>
+        <td><a href="https://www.google.com">Google</a></td>
+        <td><a href="https://www.yahoo.com">Yahoo</a></td>
+        <td><a href="https://www.facebook.com">Facebook</a></td>
+        <td><a href="https://www.twitter.com">Twitter</a></td>
+      </tr>
+    </table>
+    <h1>Testing all the things!</h1>
+    <h2>Even these things</h2>
+    <h3>And these</h3>
+    <table>
+      <colgroup>
+        <col span="1" style="background-color: red" />
+        <col style="background-color: yellow" />
+      </colgroup>
+      <tr>
+        <td>Sheep</td>
+        <td>Goats</td>
+      </tr>
+      <tr>
+        <td>Rats</td>
+        <td>Mice</td>
+      </tr>
+      <tr>
+        <td>
+          Dogs
+        </td>
+        <td>
+          Cats
+        </td>
+      </tr>
+    </table>
+
+    <ol>
+      <li>Lions</li>
+      <li>Tigers</li>
+      <li>Bears</li>
+    </ol>
+    <ul>
+      <li>Carrot</li>
+      <li>Apple</li>
+      <li>Banana</li>
+    </ul>
+    <audio controls>
+      <source src="https://www.w3schools.com/tags/horse.ogg" type="audio/ogg">
+      <source src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <article>
+      People often think that the animals featured in the famous song "The
+      Unicorn" were decided randomly, but singer Joe Bloe said
+      <blockquote>
+        Nope,
+        <br />I made it up <br />based on the animals <br />I saw out the window
+        <br />one day.
+      </blockquote>
+    </article>
+    <figure>
+      <img
+        src="https://media.istockphoto.com/vectors/cute-cartoon-unicorn-head-with-rainbow-mane-vector-id1158038636?k=20&m=1158038636&s=612x612&w=0&h=v0bInRPR3IX9-VpiLINv4S3a-KPRbUBYi2QbWbKu7E8="
+        alt="unicorn with rainbow mane"
+      />
+      <figcaption>Figure 1 - Unicorn</figcaption>
+    </figure>
+  </body>
 </html>
