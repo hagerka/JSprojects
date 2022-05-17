@@ -1,0 +1,51 @@
+.hidden {
+  visibility: hidden;
+}
+
+form {
+  margin-top: 25px;
+  display: inline-block;
+}
+select {
+  display: inline-block;
+}
+table {
+  border-spacing: 0 px;
+  border-collapse: collapse;
+  border: 1px solid lightgrey;
+}
+
+td {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+div {
+  padding: 25px;
+}
+
+label {
+  margin-left: 25px;
+}
+
+h1 {
+  color: red;
+  margin-left: 25px;
+  float: left;
+  width: 50%;
+}
+
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
