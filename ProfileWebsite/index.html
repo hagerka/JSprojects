@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script type="text/babel" src="reactScript.js"></script>
     <script src="script.js"></script>
-    <!-- Load React. -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-    <!-- Load our React component. -->
-    <script src="reactScript.js" type="text/jsx"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -17,8 +22,9 @@
     />
     <link rel="stylesheet" href="sheets.css" />
   </head>
+
   <body>
-    <div id="root">Circle goes here</div>
+    <div id="root" width="100 px" height="600 px">Circle goes here</div>
     <h1>Career Steps</h1>
     <!--password component-->
     <form onsubmit="return false">
@@ -32,7 +38,7 @@
     <!--select component-->
     <label for="steps-taken" id="steps-taken-label">Steps Taken:</label>
     <select name="steps-taken" id="steps-taken">
-      <option value="Blank"></option>
+      <option value="Blank">Select a Section</option>
       <option value="Inventory">Inventory of Skills</option>
       <option value="Interview">Interview Notes for People in Tech</option>
       <option value="Examples">Examples of Work that Interest Me</option>

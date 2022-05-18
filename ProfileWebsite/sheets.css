@@ -1,6 +1,22 @@
 .hidden {
   visibility: hidden;
 }
+@keyframes example {
+  from {
+    fill: yellow;
+  }
+  to {
+    fill: whitesmoke;
+  }
+}
+
+/* The element to apply the animation to */
+circle {
+  fill: red;
+  animation: example 2s 6;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
 
 form {
   margin-top: 25px;
